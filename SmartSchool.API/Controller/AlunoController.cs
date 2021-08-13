@@ -12,19 +12,32 @@ using System.Threading.Tasks;
 
 namespace SmartSchool.API.Controller
 {
+    /// <summary>
+    /// 
+    /// </summary>
     [ApiController]
-    [Route("api/[Controller]")]
+    [ApiVersion("1.0")]
+    [Route("api/v{version:apiVersion}/[controller]")]
     public class AlunoController : ControllerBase
     {
         private readonly IRepository _repo;
         private readonly IMapper _mapper;
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="repo"></param>
+        /// <param name="mapper"></param>
         public AlunoController(IRepository repo, IMapper mapper) 
         {
             _repo = repo;
             _mapper = mapper;
         }
 
+        /// <summary>
+        /// Meteodo responsavel para retornar otodos os meus alunos
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public IActionResult Get()
         {
@@ -32,6 +45,10 @@ namespace SmartSchool.API.Controller
             return Ok(_mapper.Map<IEnumerable<AlunoDto>>(alunos));
         }
 
+        /// <summary>
+        /// Metodo responsavel por retornar apenas um unico AlunoDTO
+        /// </summary>
+        /// <returns></returns>
         [HttpGet("getRegister")]
         public IActionResult GetRegister()
         {
@@ -39,6 +56,11 @@ namespace SmartSchool.API.Controller
             return Ok(new AlunoRegistrarDto());
         }
 
+        /// <summary>
+        /// Metodo responsavel por retornar apenas um unico Aluno por meio do codigo do id.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpGet("{id}")]
         public IActionResult GetById(int id)
         {

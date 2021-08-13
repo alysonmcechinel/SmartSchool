@@ -5,10 +5,22 @@ using System.Threading.Tasks;
 
 namespace SmartSchool.API.Dtos
 {
+    /// <summary>
+    /// Este é o DTO de aluno para cadastro.
+    /// </summary>
     public class AlunoRegistrarDto
     {
+        /// <summary>
+        /// Identificador e chave do banco.
+        /// </summary>
         public int Id { get; set; }
+        /// <summary>
+        /// Chave do aluno, para outros negocios na instituição.
+        /// </summary>
         public int Matricula { get; set; }
+        /// <summary>
+        /// Primeiro nome  e sobrenome do aluno.
+        /// </summary>
         public string Nome { get; set; }
         public string Sobrenome { get; set; }
         public string Telefone { get; set; }
