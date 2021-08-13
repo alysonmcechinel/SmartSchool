@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace SmartSchool.API.Dtos
 {
-    public class AlunoResgistrarDto
+    public class AlunoRegistrarDto
     {
         public int Id { get; set; }
         public int Matricula { get; set; }

@@ -36,7 +36,7 @@ namespace SmartSchool.API.Controller
         public IActionResult GetRegister()
         {
 
-            return Ok(new AlunoResgistrarDto());
+            return Ok(new AlunoRegistrarDto());
         }
 
         [HttpGet("{id}")]
@@ -53,7 +53,7 @@ namespace SmartSchool.API.Controller
         }
 
         [HttpPost]
-        public IActionResult Post(AlunoResgistrarDto model)
+        public IActionResult Post(AlunoRegistrarDto model)
         {
             var aluno = _mapper.Map<Aluno>(model);
 
@@ -67,7 +67,7 @@ namespace SmartSchool.API.Controller
         }
 
         [HttpPut("{id}")]
-        public IActionResult Put(int id, AlunoResgistrarDto model)
+        public IActionResult Put(int id, AlunoRegistrarDto model)
         {
             var aluno = _repo.GetAlunoById(id);
 
@@ -86,7 +86,7 @@ namespace SmartSchool.API.Controller
         }
 
         [HttpPatch("{id}")]
-        public IActionResult Patch(int id, AlunoResgistrarDto model)
+        public IActionResult Patch(int id, AlunoRegistrarDto model)
         {
             var aluno = _repo.GetAlunoById(id);
 
