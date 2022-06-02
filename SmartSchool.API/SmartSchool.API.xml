@@ -4,88 +4,167 @@
         <name>SmartSchool.API</name>
     </assembly>
     <members>
-        <member name="T:SmartSchool.API.Controller.AlunoController">
+        <member name="T:SmartSchool.API.V1.Controller.AlunoController">
             <summary>
-            
+            Versao 1 do meu controlador de Alunos
             </summary>
         </member>
-        <member name="M:SmartSchool.API.Controller.AlunoController.#ctor(SmartSchool.API.Data.IRepository,AutoMapper.IMapper)">
+        <member name="M:SmartSchool.API.V1.Controller.AlunoController.#ctor(SmartSchool.API.Data.IRepository,AutoMapper.IMapper)">
             <summary>
             
             </summary>
             <param name="repo"></param>
             <param name="mapper"></param>
         </member>
-        <member name="M:SmartSchool.API.Controller.AlunoController.Get">
+        <member name="M:SmartSchool.API.V1.Controller.AlunoController.Get">
             <summary>
             Meteodo responsavel para retornar otodos os meus alunos
             </summary>
             <returns></returns>
         </member>
-        <member name="M:SmartSchool.API.Controller.AlunoController.GetRegister">
-            <summary>
-            Metodo responsavel por retornar apenas um unico AlunoDTO
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:SmartSchool.API.Controller.AlunoController.GetById(System.Int32)">
+        <member name="M:SmartSchool.API.V1.Controller.AlunoController.GetById(System.Int32)">
             <summary>
             Metodo responsavel por retornar apenas um unico Aluno por meio do codigo do id.
             </summary>
             <param name="id"></param>
             <returns></returns>
         </member>
-        <member name="P:SmartSchool.API.Dtos.AlunoDto.Id">
+        <member name="T:SmartSchool.API.V1.Controller.ProfessorController">
+            <summary>
+            Versao 1 do meu controlador de Professores
+            </summary>
+        </member>
+        <member name="P:SmartSchool.API.V1.Dtos.AlunoDto.Id">
             <summary>
             Identificador e chave do banco
             </summary>
         </member>
-        <member name="P:SmartSchool.API.Dtos.AlunoDto.Matricula">
+        <member name="P:SmartSchool.API.V1.Dtos.AlunoDto.Matricula">
             <summary>
             Chave do aluno, para outros negocios na instituição
             </summary>
         </member>
-        <member name="P:SmartSchool.API.Dtos.AlunoDto.Nome">
+        <member name="P:SmartSchool.API.V1.Dtos.AlunoDto.Nome">
             <summary>
             Primeiro nome  e sobrenome do aluno
             </summary>
         </member>
-        <member name="P:SmartSchool.API.Dtos.AlunoDto.Telefone">
+        <member name="P:SmartSchool.API.V1.Dtos.AlunoDto.Telefone">
             <summary>
             telefone do aluno
             </summary>
         </member>
-        <member name="P:SmartSchool.API.Dtos.AlunoDto.Idade">
+        <member name="P:SmartSchool.API.V1.Dtos.AlunoDto.Idade">
             <summary>
             Idade é o calculo relacionado a data de nascimento do aluno
             </summary>
         </member>
-        <member name="P:SmartSchool.API.Dtos.AlunoDto.DataMatricula">
+        <member name="P:SmartSchool.API.V1.Dtos.AlunoDto.DataMatricula">
             <summary>
             Data de matricula do 
             </summary>
         </member>
-        <member name="P:SmartSchool.API.Dtos.AlunoDto.Ativo">
+        <member name="P:SmartSchool.API.V1.Dtos.AlunoDto.Ativo">
             <summary>
             verificar se esta ativo ou não
             </summary>
         </member>
-        <member name="T:SmartSchool.API.Dtos.AlunoRegistrarDto">
+        <member name="T:SmartSchool.API.V1.Dtos.AlunoRegistrarDto">
             <summary>
             Este é o DTO de aluno para cadastro.
             </summary>
         </member>
-        <member name="P:SmartSchool.API.Dtos.AlunoRegistrarDto.Id">
+        <member name="P:SmartSchool.API.V1.Dtos.AlunoRegistrarDto.Id">
             <summary>
             Identificador e chave do banco.
             </summary>
         </member>
-        <member name="P:SmartSchool.API.Dtos.AlunoRegistrarDto.Matricula">
+        <member name="P:SmartSchool.API.V1.Dtos.AlunoRegistrarDto.Matricula">
             <summary>
             Chave do aluno, para outros negocios na instituição.
             </summary>
         </member>
-        <member name="P:SmartSchool.API.Dtos.AlunoRegistrarDto.Nome">
+        <member name="P:SmartSchool.API.V1.Dtos.AlunoRegistrarDto.Nome">
+            <summary>
+            Primeiro nome  e sobrenome do aluno.
+            </summary>
+        </member>
+        <member name="T:SmartSchool.API.V2.Controller.AlunoController">
+            <summary>
+            Versao 2 do meu controlador de Alunos
+            </summary>
+        </member>
+        <member name="M:SmartSchool.API.V2.Controller.AlunoController.#ctor(SmartSchool.API.Data.IRepository,AutoMapper.IMapper)">
+            <summary>
+            
+            </summary>
+            <param name="repo"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:SmartSchool.API.V2.Controller.AlunoController.Get">
+            <summary>
+            Meteodo responsavel para retornar otodos os meus alunos
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SmartSchool.API.V2.Controller.AlunoController.GetById(System.Int32)">
+            <summary>
+            Metodo responsavel por retornar apenas um unico Aluno por meio do codigo do id.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="P:SmartSchool.API.V2.Dtos.AlunoDto.Id">
+            <summary>
+            Identificador e chave do banco
+            </summary>
+        </member>
+        <member name="P:SmartSchool.API.V2.Dtos.AlunoDto.Matricula">
+            <summary>
+            Chave do aluno, para outros negocios na instituição
+            </summary>
+        </member>
+        <member name="P:SmartSchool.API.V2.Dtos.AlunoDto.Nome">
+            <summary>
+            Primeiro nome  e sobrenome do aluno
+            </summary>
+        </member>
+        <member name="P:SmartSchool.API.V2.Dtos.AlunoDto.Telefone">
+            <summary>
+            telefone do aluno
+            </summary>
+        </member>
+        <member name="P:SmartSchool.API.V2.Dtos.AlunoDto.Idade">
+            <summary>
+            Idade é o calculo relacionado a data de nascimento do aluno
+            </summary>
+        </member>
+        <member name="P:SmartSchool.API.V2.Dtos.AlunoDto.DataMatricula">
+            <summary>
+            Data de matricula do 
+            </summary>
+        </member>
+        <member name="P:SmartSchool.API.V2.Dtos.AlunoDto.Ativo">
+            <summary>
+            verificar se esta ativo ou não
+            </summary>
+        </member>
+        <member name="T:SmartSchool.API.V2.Dtos.AlunoRegistrarDto">
+            <summary>
+            Este é o DTO de aluno para cadastro.
+            </summary>
+        </member>
+        <member name="P:SmartSchool.API.V2.Dtos.AlunoRegistrarDto.Id">
+            <summary>
+            Identificador e chave do banco.
+            </summary>
+        </member>
+        <member name="P:SmartSchool.API.V2.Dtos.AlunoRegistrarDto.Matricula">
+            <summary>
+            Chave do aluno, para outros negocios na instituição.
+            </summary>
+        </member>
+        <member name="P:SmartSchool.API.V2.Dtos.AlunoRegistrarDto.Nome">
             <summary>
             Primeiro nome  e sobrenome do aluno.
             </summary>
